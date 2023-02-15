@@ -1,0 +1,188 @@
+/* color palette: https://colorhunt.co/palette/08d9d6252a34ff2e63eaeaea */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+* {
+  font-family: monospace;
+}
+
+:root {
+  --backgroundColor: #252a34;
+  --gridLineColor: #ff2e63;
+  --XOColor: #08d9d6;
+  --textColor: #eaeaea;
+  --btnColor: #08d9d6;
+  --borderRadius: 8px;
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 15px;
+  --spacing-lg: 20px;
+  --spacing-xl: 40px;
+  --shadow: rgba(0, 0, 0, 0.57) 0px 1px 5px;
+}
+
+p {
+  text-align: center;
+  font-family: monospace;
+}
+body {
+  background-color: var(--backgroundColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+.header {
+  background-color: var(--XOColor);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow);
+  color: var(--backgroundColor);
+  font-weight: bolder;
+  font-size: 50px;
+}
+
+.main-content {
+  display: flex;
+  height: 30rem;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#gameGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 150px);
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--gridLineColor);
+}
+.grid-btn {
+  background-color: var(--backgroundColor);
+  color: var(--XOColor);
+  font-size: var(--spacing-lg);
+  font-weight: 600;
+  border: none;
+}
+.grid-btn:hover {
+  opacity: 95%;
+  cursor: pointer;
+}
+#gridResetBtn {
+  width: 150px;
+  background-color: var(--btnColor);
+  border-radius: var(--borderRadius);
+  border: none;
+  margin: var(--spacing-md) 0px;
+  height: 3rem;
+  box-shadow: var(--shadow);
+}
+#gridResetBtn:hover {
+  background-color: rgba(8, 217, 214, 0.4);
+  cursor: pointer;
+}
+
+/* footer */
+.footer {
+  color: var(--btnColor);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+.github-link::before {
+  padding: 0;
+  margin: 0;
+  content: '\f09b';
+}
